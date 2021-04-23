@@ -1,0 +1,27 @@
+
+alias gs='git status -s'
+alias gl='git lg -n 30'
+alias gdel='git ls-files --deleted -z | xargs -0 git rm'
+
+# Git fetch (no merge) all directories in the tree.
+alias uar='find . -name .git -type d | xargs -n1 -P4 -I% git --git-dir=% --work-tree=%/.. remote update -p'
+
+# Npm install all folders down one level
+alias npm-all='find . -maxdepth 2 -name package.json -printf "%h\n" | xargs -n1 -P1 -I% bash -c "cd % && npm i"'
+
+# Npm How much?
+alias npmdu='find . -name "node_modules" -type d -prune -print | xargs du -chs'
+
+# Npm remove all
+alias npmgtf='find . -name "node_modules" -type d -prune -print -exec rm -rf "{}" \;'
+
+alias upd='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove -y'
+
+# Weather
+alias wttr='curl wttr.in/Kinross?m'
+
+# Fixes
+alias fixfirefox='sudo rm /usr/lib/firefox/ubuntumate.cfg'
+
+eval $(thefuck --alias doh)
+eval $(thefuck --alias fuckit)

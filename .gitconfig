@@ -1,0 +1,25 @@
+[user]
+	email = goldsacs@gmail.com
+	name = Colin
+[alias]
+	delete-merged-branches = "!f() { git checkout --quiet master && git branch --merged | grep --invert-match '\\*' | xargs -n 1 git branch --delete; git checkout --quiet @{-1}; }; f"
+	list-remote-merged-branches = !sh -c 'git checkout master && git fetch && git branch -r --merged master | grep -v master | xargs -r -n 1 echo'
+	delete-remote-merged-branches = !sh -c 'git checkout master && git fetch && git branch -r --merged master | grep -v master | xargs -r -t -n 1 git branch -d'
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	fpull = !sh -c 'git fetch origin master && git reset --hard FETCH_HEAD && git clean -df'
+	all = "!f() { ls | xargs -I{} git -C {} $1; }; f"
+[core]
+  editor = code --wait
+  excludesfile = ~/.gitignore_global
+[diff]
+  tool = vscode
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+  tool = vscode
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
+[fetch]
+	prune = true
+[push]
+	default = simple
