@@ -42,3 +42,5 @@ function kpp {
   PROCUSING=$(lsof -ti $TYPE:$PORT)
   [ -z "$PROCUSING" ] && echo "No Process on Port $PORT" || {echo "Killing PID $PROCUSING on PORT $PORT"; kill -9 $PROCUSING}
 }
+
+alias k5k='kpp 5000 && kpp 5000'
