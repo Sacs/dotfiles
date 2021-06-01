@@ -9,6 +9,10 @@
 	fpull = !sh -c 'git fetch origin main && git reset --hard FETCH_HEAD && git clean -df'
 	all = "!f() { ls | xargs -I{} git -C {} $1; }; f"
 	uncommit = reset HEAD^
+  	cob = checkout -b
+  	listbr = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+	cm = commit -m
+    cma = commit -a -m
 [core]
   editor = code --wait
   excludesfile = ~/.gitignore_global
