@@ -44,3 +44,4 @@ function kpp {
 }
 
 alias k5k='kpp 5000 && kpp 5000'
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
