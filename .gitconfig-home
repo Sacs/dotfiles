@@ -1,0 +1,11 @@
+[user]
+	email = goldsacs@gmail.com
+	name = Colin
+
+[init]
+  defaultBranch = main
+
+[alias]
+  delete-merged-branches = "!f() { git checkout --quiet main && git branch --merged | grep --invert-match '\\*' | xargs -n 1 git branch --delete; git checkout --quiet @{-1}; }; f"
+	list-remote-merged-branches = !sh -c 'git checkout main && git fetch && git branch -r --merged main | grep -v main | xargs -r -n 1 echo'
+	delete-remote-merged-branches = !sh -c 'git checkout main && git fetch && git branch -r --merged main | grep -v main | xargs -r -t -n 1 git branch -d'
