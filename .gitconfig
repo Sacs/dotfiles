@@ -1,16 +1,17 @@
-[includeIf "gitdir:~/Projects/personal/"]
+[includeIf "gitdir:~/projects/personal/"]
   path = ~/.gitconfig-personal
-[includeIf "gitdir:~/Projects/vidatec/"]
+[includeIf "gitdir:~/projects/vidatec/"]
   path = ~/.gitconfig-work
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	fpull = !sh -c 'git fetch origin develop && git reset --hard FETCH_HEAD && git clean -df'
 	all = "!f() { ls | xargs -I{} git -C {} $1; }; f"
-	uncommit = reset HEAD^
+	uncommit = reset --soft HEAD^
+  unstage = reset HEAD
   cob = checkout -b
   listbr = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
 	cm = commit -m
   cma = commit -a -m
+  lb = checkout -
 [core]
   editor = code --wait
   excludesfile = ~/.gitignore_global
@@ -25,4 +26,4 @@
 [fetch]
 	prune = true
 [push]
-	default = simple
+	default = current

@@ -9,3 +9,4 @@
   delete-merged-branches = "!f() { git checkout --quiet develop && git branch --merged | grep --invert-match '\\*' | xargs -n 1 git branch --delete; git checkout --quiet @{-1}; }; f"
 	list-remote-merged-branches = !sh -c 'git checkout develop && git fetch && git branch -r --merged develop | grep -v develop | xargs -r -n 1 echo'
 	delete-remote-merged-branches = !sh -c 'git checkout develop && git fetch && git branch -r --merged develop | grep -v develop | xargs -r -t -n 1 git branch -d'
+  fpull = !sh -c 'git fetch origin develop && git reset --hard FETCH_HEAD && git clean -df'
