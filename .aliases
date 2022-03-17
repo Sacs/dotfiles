@@ -24,6 +24,8 @@ alias fixfirefox='sudo rm /usr/lib/firefox/ubuntumate.cfg'
 
 eval $(thefuck --alias doh)
 eval $(thefuck --alias fuckit)
+eval $(thefuck --alias)
+
 
 
 # # # # # Functions # # # # #
@@ -46,4 +48,11 @@ function kpp {
 alias k5k='kpp 5000 && kpp 5000'
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 alias sus='cd ~/projects/vidatec/sustainableGolf'
-alias mysql=/Applications/MAMP/Library/bin/mysql
+
+case "$OSTYPE" in
+  darwin*)
+    # Mac only
+    alias upd-npm-global='sudo find /Users/colinbell/.nvm/ -name ".DS_Store" -depth -exec rm {} \; && npm update -g'
+    alias mysql=/Applications/MAMP/Library/bin/mysql
+  ;;
+esac
