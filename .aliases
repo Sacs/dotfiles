@@ -52,7 +52,7 @@ alias sus='cd ~/projects/vidatec/sustainableGolf'
 case "$OSTYPE" in
   darwin*)
     # Mac only
-    alias upd-npm-global='sudo find /Users/colinbell/.nvm/ -name ".DS_Store" -depth -exec rm {} \; && npm update -g'
+    alias upd-npm-global='sudo find ~/.nvm/ -name ".DS_Store" -depth -exec rm {} \; && npm update -g'
     alias mysql=/Applications/MAMP/Library/bin/mysql
   ;;
 esac
