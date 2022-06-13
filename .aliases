@@ -47,12 +47,17 @@ function kpp {
 
 alias k5k='kpp 5000 && kpp 5000'
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
-alias sus='cd ~/projects/vidatec/sustainableGolf'
+
 
 case "$OSTYPE" in
   darwin*)
     # Mac only
+    alias proj='cd ~/projects/vidatec/'
     alias upd-npm-global='sudo find ~/.nvm/ -name ".DS_Store" -depth -exec rm {} \; && npm update -g'
     alias mysql=/Applications/MAMP/Library/bin/mysql
+    alias upd='brew upgrade'
+  ;;
+  linux-*)
+    alias upd='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove -y'
   ;;
 esac

@@ -8,7 +8,7 @@
 	uncommit = reset --soft HEAD^
   unstage = reset HEAD
   cob = checkout -b
-  listbr = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+  lsb = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
 	cm = commit -m
   cma = commit -a -m
   lb = checkout -
