@@ -15,9 +15,6 @@ alias npmdu='find . -name "node_modules" -type d -prune -print | xargs du -chs'
 # Npm remove all
 alias npmgtf='find . -name "node_modules" -type d -prune -print -exec rm -rf "{}" \;'
 
-alias upd='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove -y'
-
-
 
 # Fixes
 alias fixfirefox='sudo rm /usr/lib/firefox/ubuntumate.cfg'
@@ -58,6 +55,6 @@ case "$OSTYPE" in
     alias upd='brew upgrade && brew cleanup && brew doctor'
   ;;
   linux-*)
-    alias upd='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove -y'
+    alias upd='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove -y && sudo apt autoclean -y'
   ;;
 esac
