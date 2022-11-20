@@ -88,7 +88,7 @@ plugins=(
         nvm
 )
 
-zstyle :omz:plugins:ssh-agent identities id_sacs_github id_bitbucket
+zstyle :omz:plugins:ssh-agent identities id_sacs_github id_cbell id_cbell_vixio
 
 source $ZSH/oh-my-zsh.sh
 
@@ -157,3 +157,8 @@ PATH="$PATH:/Users/colinbell/Library/Application Support/multipass/bin"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# pnpm
+export PNPM_HOME="/home/mrsacs/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
