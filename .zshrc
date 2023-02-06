@@ -163,3 +163,6 @@ PATH="$PATH:/Users/colinbell/Library/Application Support/multipass/bin"
 export PNPM_HOME="/home/cbell/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
