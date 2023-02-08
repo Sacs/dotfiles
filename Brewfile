@@ -1,3 +1,4 @@
+### Worth saying this was only used on a Mac so your mileage may vary on other homebrew supported OS
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
