@@ -1,7 +1,3 @@
-[user]
-	email = goldsacs@gmail.com
-	name = Colin
-
 [init]
   defaultBranch = main
 

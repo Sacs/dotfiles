@@ -1,7 +1,3 @@
-[user]
-	email = cbell@vixio.com
-	name = Colin Bell
-
 [init]
   defaultBranch = master
 

@@ -1,3 +1,5 @@
+[include]
+  path = ~/.gitconfig-username
 [includeIf "gitdir:~/projects/personal/"]
   path = ~/.gitconfig-home
 [includeIf "gitdir:~/projects/work/"]
