@@ -2,7 +2,7 @@
   defaultBranch = master
 
 [alias]
-  delete-merged-branches = "!f() { git checkout --quiet master && git branch --merged | grep --invert-match '\\*' | xargs -n 1 git branch --delete; git checkout --quiet @{-1}; }; f"
-	list-remote-merged-branches = !sh -c 'git checkout master && git fetch && git branch -r --merged master | grep -v master | xargs -r -n 1 echo'
-	delete-remote-merged-branches = !sh -c 'git checkout master && git fetch && git branch -r --merged master | grep -v master | xargs -r -t -n 1 git branch -d'
-  fpull = !sh -c 'git fetch origin master && git reset --hard FETCH_HEAD && git clean -df'
+  delete-merged-branches = "!f() { DEFAULT=$(git default); git checkout --quiet ${1-$DEFAULT} && git branch --merged | grep --invert-match '\\*' | xargs -n 1 git branch --delete; git checkout --quiet @{-1}; }; f"
+	list-remote-merged-branches = !sh -c 'git checkout ${1-$DEFAULT} && git fetch && git branch -r --merged ${1-$DEFAULT} | grep -v ${1-$DEFAULT} | xargs -r -n 1 echo'
+	delete-remote-merged-branches = !sh -c 'git checkout ${1-$DEFAULT} && git fetch && git branch -r --merged ${1-$DEFAULT} | grep -v ${1-$DEFAULT} | xargs -r -t -n 1 git branch -d'
+  fpull = !sh -c 'git fetch origin ${1-$DEFAULT} && git reset --hard FETCH_HEAD && git clean -df'

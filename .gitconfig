@@ -5,6 +5,7 @@
 [includeIf "gitdir:~/projects/work/"]
   path = ~/.gitconfig-work
 [alias]
+  default = !git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	all = "!f() { ls | xargs -I{} git -C {} $1; }; f"
 	uncommit = reset --soft HEAD^
@@ -14,6 +15,8 @@
 	cm = commit -m
   cma = commit -a -m
   lb = checkout -
+  undo = reset HEAD~1 --mixed
+  wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
 [core]
   editor = code --wait
   excludesfile = ~/.gitignore_global
