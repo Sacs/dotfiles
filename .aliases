@@ -25,7 +25,8 @@ eval $(thefuck --alias doh)
 eval $(thefuck --alias fuckit)
 eval $(thefuck --alias)
 
-
+# Package management
+alias pnpm-upgrade='curl -fsSL https://get.pnpm.io/install.sh | sh -'
 
 # # # # # Functions # # # # #
 
