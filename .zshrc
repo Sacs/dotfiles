@@ -97,6 +97,10 @@ if [ -f ~/.aliases ]; then
     source ~/.aliases
 fi
 
+if [ -f ~/.onlyherealiases ]; then
+    source ~/.onlyherealiases
+fi
+
 autoload -U add-zsh-hook
 # load-nvmrc() {
 #   local node_version="$(nvm version)"
