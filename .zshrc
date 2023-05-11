@@ -82,11 +82,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
         git
-<<<<<<< HEAD
-#        ssh-agent
-=======
         # ssh-agent
->>>>>>> 6273859 (Some minor tweaks to allow ubuntu to manage my ssh)
         dotenv
         thefuck
         # nvm
