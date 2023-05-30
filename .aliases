@@ -58,7 +58,7 @@ case "$OSTYPE" in
     alias upd='brew upgrade && brew cleanup && brew doctor'
   ;;
   linux-*)
-    alias upd='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove -y && sudo apt autoclean -y'
+    alias upd='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove -y && sudo apt autoclean -y && sudo snap refresh && sudo flatpak upgrade -y'
     alias proj='cd ~/projects/work/'
   ;;
 esac
