@@ -1,5 +1,5 @@
 [init]
-  defaultBranch = master
+  defaultBranch = stage
 
 [alias]
   delete-merged-branches = "!f() { DEFAULT=$(git default); git checkout --quiet ${1-$DEFAULT} && git branch --merged | grep --invert-match '\\*' | xargs -n 1 git branch --delete; git checkout --quiet @{-1}; }; f"
