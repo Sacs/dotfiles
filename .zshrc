@@ -82,7 +82,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
         git
-        # ssh-agent
+        ssh-agent
         dotenv
         thefuck
         # nvm
@@ -175,12 +175,12 @@ esac
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
 # SSH Agent should be running, once
-if ! ps -ef | grep "[s]sh-agent" &>/dev/null; then
-    echo Starting SSH Agent
-    eval $(ssh-agent -s)
-fi
+# if ! ps -ef | grep "[s]sh-agent" &>/dev/null; then
+#     echo Starting SSH Agent
+#     eval $(ssh-agent -s)
+# fi
 
-if ! ssh-add -l &>/dev/null; then
-     echo Adding keys...
-     ssh-add -t 1d
-fi
+# if ! ssh-add -l &>/dev/null; then
+#      echo Adding keys...
+#      ssh-add -t 1d
+# fi
