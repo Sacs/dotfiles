@@ -17,6 +17,7 @@ alias npmgtf='find . -name "node_modules" -type d -prune -print -exec rm -rf "{}
 
 # Docker
 alias docker-stop-all='docker stop $(docker ps --format '{{.Names}}')'
+alias docker-stop-dev='docker-stop-all && docker start portainer'
 
 # Fixes
 alias fixfirefox='sudo rm /usr/lib/firefox/ubuntumate.cfg'
