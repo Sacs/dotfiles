@@ -5,6 +5,7 @@ alias gdel='git ls-files --deleted -z | xargs -0 git rm'
 
 # Git fetch (no merge) all directories in the tree.
 alias uar='find . -name .git -type d | xargs -n1 -P4 -I% git --git-dir=% --work-tree=%/.. remote update -p'
+alias fpullar='find . -name .git -type d | xargs -n1 -P4 -I% git --git-dir=% --work-tree=%/.. pull --force'
 alias lg='lazygit'
 
 # Npm install all folders down one level
