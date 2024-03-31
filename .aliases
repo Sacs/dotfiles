@@ -2,6 +2,7 @@
 alias gs='git status -s'
 alias gl='git lg -n 30'
 alias gdel='git ls-files --deleted -z | xargs -0 git rm'
+alias lz='lazygit'
 
 # Git fetch (no merge) all directories in the tree.
 alias uar='find . -name .git -type d | xargs -n1 -P4 -I% git --git-dir=% --work-tree=%/.. remote update -p'
@@ -30,6 +31,9 @@ eval $(thefuck --alias)
 
 # Package management
 alias pnpm-upgrade='curl -fsSL https://get.pnpm.io/install.sh | sh -'
+alias pm='pnpm'
+alias pmx='pnpm dlx'
+
 
 # # # # # Functions # # # # #
 
