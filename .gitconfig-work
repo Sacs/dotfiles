@@ -3,6 +3,13 @@
 
 [alias]
   delete-merged-branches = "!f() { DEFAULT=$(git default); git checkout --quiet ${1-$DEFAULT} && git branch --merged | grep --invert-match '\\*' | xargs -n 1 git branch --delete; git checkout --quiet @{-1}; }; f"
+  delete-merged-branches2 = "!f() { \
+    DEFAULT=$(git default); \
+    PROTECTED_BRANCHES='master stage'; \
+    git checkout --quiet ${1-$DEFAULT} && \
+    git branch --merged | grep --invert-match '\\*' | grep --invert-match "$(echo $PROTECTED_BRANCHES | sed 's/ /\\|/g')" | xargs -n 1 git branch --delete; \
+    git checkout --quiet @{-1}; \
+}; f"
 	list-remote-merged-branches = !sh -c 'git checkout ${1-$DEFAULT} && git fetch && git branch -r --merged ${1-$DEFAULT} | grep -v ${1-$DEFAULT} | xargs -r -n 1 echo'
 	delete-remote-merged-branches = !sh -c 'git checkout ${1-$DEFAULT} && git fetch && git branch -r --merged ${1-$DEFAULT} | grep -v ${1-$DEFAULT} | xargs -r -t -n 1 git branch -d'
   fpull = !sh -c 'git fetch origin ${1-$DEFAULT} && git reset --hard FETCH_HEAD && git clean -df'
