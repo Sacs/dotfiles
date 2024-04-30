@@ -84,7 +84,6 @@ plugins=(
         git
         ssh-agent
         dotenv
-        thefuck
         # nvm
 )
 
