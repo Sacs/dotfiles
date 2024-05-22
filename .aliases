@@ -24,6 +24,10 @@ alias docker-stop-dev='docker-stop-all && docker start portainer'
 # Fixes
 alias fixfirefox='sudo rm /usr/lib/firefox/ubuntumate.cfg'
 
+# eval $(thefuck --alias doh)
+# eval $(thefuck --alias fuckit)
+# eval $(thefuck --alias)
+
 # Package management
 alias pnpm-upgrade='curl -fsSL https://get.pnpm.io/install.sh | sh -'
 alias pm='pnpm'
