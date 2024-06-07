@@ -33,6 +33,12 @@ alias pnpm-upgrade='curl -fsSL https://get.pnpm.io/install.sh | sh -'
 alias pm='pnpm'
 alias pmx='pnpm dlx'
 
+# Camera controls
+alias af-off='v4l2-ctl -d /dev/video4 --set-ctrl=focus_automatic_continuous=0'
+alias af-on='v4l2-ctl -d /dev/video4 --set-ctrl=focus_automatic_continuous=1'
+alias ae-off='v4l2-ctl -d /dev/video4 --set-ctrl=auto_exposure=1'
+alias ae-on='v4l2-ctl -d /dev/video4 --set-ctrl=auto_exposure=3'
+
 
 # # # # # Functions # # # # #
 
