@@ -184,3 +184,8 @@ esac
 #      echo Adding keys...
 #      ssh-add -t 1d
 # fi
+
+
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
