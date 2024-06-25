@@ -39,6 +39,7 @@ alias af-on='v4l2-ctl -d /dev/video4 --set-ctrl=focus_automatic_continuous=1'
 alias ae-off='v4l2-ctl -d /dev/video4 --set-ctrl=auto_exposure=1'
 alias ae-on='v4l2-ctl -d /dev/video4 --set-ctrl=auto_exposure=3'
 
+alias pmpm='pnpm'
 
 # # # # # Functions # # # # #
 
