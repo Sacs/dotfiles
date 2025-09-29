@@ -1,3 +1,32 @@
 /.vscode/
 /.idea/
 .nvmrc
+
+
+# Claude Code files
+.claude/
+claude_chat_*
+.claude_chat
+claude-*.json
+claude_session_*
+
+# Claude Code logs
+claude.log
+claude_*.log
+.claude_logs/
+
+# Claude Code cache and temporary directories
+.claude_cache/
+.claude_temp/
+claude_temp/
+
+# Claude-generated backup files
+*.claude_backup
+claude_backup_*
+
+# General Claude patterns
+*claude*cache*
+*claude*temp*
+*claude*session*
+
+CLAUDE.md
