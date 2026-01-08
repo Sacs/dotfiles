@@ -192,3 +192,6 @@ fi
 
 # Path for Go.
 export PATH=$PATH:/usr/local/go/bin
+
+# Add npm globals to PATH (works with pnpm env)
+export PATH="$(npm config get prefix)/bin:$PATH"
