@@ -47,10 +47,10 @@ alias pmpm='pnpm'
 
 # # # # # Functions # # # # #
 
-# Weather forecast (kinross scotland by default)
-# For other locations such as Edinburgh use "wttr edinburgh"
+# Weather forecast (edinburgh scotland by default)
+# For other locations such as Glasgow use "wttr glasgow"
 function wttr() {
-  local place="${1:-kinross+scotland}"
+  local place="${1:-edinburgh+scotland}"
   curl "wttr.in/$place?m"
 }
 
@@ -69,7 +69,7 @@ export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 case "$OSTYPE" in
   darwin*)
     # Mac only
-    alias proj='cd ~/projects/vidatec/'
+    alias proj='cd ~/projects/work/'
     alias upd-npm-global='sudo find ~/.nvm/ -name ".DS_Store" -depth -exec rm {} \; && npm update -g'
     alias mysql=/Applications/MAMP/Library/bin/mysql
     alias upd='brew upgrade && brew cleanup && brew doctor'

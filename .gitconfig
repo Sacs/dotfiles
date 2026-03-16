@@ -1,7 +1,11 @@
 [include]
-  path = ~/.gitconfig-username
+  path = ~/.gitconfig-user
+[includeIf "gitdir:~/projects/personal/"]
+  path = ~/.gitconfig-home-local
 [includeIf "gitdir:~/projects/personal/"]
   path = ~/.gitconfig-home
+[includeIf "gitdir:~/projects/work/"]
+  path = ~/.gitconfig-work-local
 [includeIf "gitdir:~/projects/work/"]
   path = ~/.gitconfig-work
 [alias]

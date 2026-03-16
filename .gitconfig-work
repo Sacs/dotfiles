@@ -4,7 +4,7 @@
 [alias]
   delete-merged-branches = "!f() { \
     DEFAULT=$(git default); \
-    PROTECTED_BRANCHES='master stage main dev fs-stage'; \
+    PROTECTED_BRANCHES=$(git config branch.protected 2>/dev/null || echo 'master main dev'); \
     git checkout --quiet ${1-$DEFAULT} && \
     git branch --merged | grep --invert-match '\\*' | grep --invert-match "$(echo $PROTECTED_BRANCHES | sed 's/ /\\|/g')" | xargs -n 1 git branch --delete; \
     git checkout --quiet @{-1}; \
@@ -14,5 +14,3 @@
   fpull = "!f() { DEFAULT=$(git default); git fetch origin ${1-$DEFAULT} && git reset --hard FETCH_HEAD && git clean -df; }; f"
 
 
-[core]
-    sshCommand = ssh -i ~/.ssh/id_cbell_vixio
