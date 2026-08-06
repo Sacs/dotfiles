@@ -1,6 +1,6 @@
 # dotfiles
 This is just my collection of dotfiles that I use on mac, linux and wsl2
-(I actively have use Ubuntu for the last ten years so Mac and WSL are generally unmaintained 
+(I have mostly used Ubuntu for the last ten years so Mac and WSL are generally unmaintained 
 but the functionality to run different commands in the scripts or aliases should still work)
 
 Feel free to use what you like...
